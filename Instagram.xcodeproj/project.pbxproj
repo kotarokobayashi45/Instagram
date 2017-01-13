@@ -24,8 +24,9 @@
 		981588041E248F5900670BF2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981588031E248F5900670BF2 /* OpenGLES.framework */; };
 		981588061E248F6500670BF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981588051E248F6500670BF2 /* QuartzCore.framework */; };
 		9815880C1E24B81D00670BF2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815880B1E24B81D00670BF2 /* Const.swift */; };
-		9815880F1E24BD2A00670BF2 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815880D1E24BD2A00670BF2 /* PostTableViewController.swift */; };
-		981588101E24BD2A00670BF2 /* PostTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9815880E1E24BD2A00670BF2 /* PostTableViewController.xib */; };
+		9819BB881E25087700BA8742 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BB861E25087700BA8742 /* PostTableViewCell.swift */; };
+		9819BB891E25087700BA8742 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9819BB871E25087700BA8742 /* PostTableViewCell.xib */; };
+		9819BB8B1E25168100BA8742 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819BB8A1E25168100BA8742 /* PostData.swift */; };
 		98DA890F1E11FFDC001DA087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA890E1E11FFDC001DA087 /* AppDelegate.swift */; };
 		98DA89111E11FFDC001DA087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA89101E11FFDC001DA087 /* ViewController.swift */; };
 		98DA89141E11FFDC001DA087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98DA89121E11FFDC001DA087 /* Main.storyboard */; };
@@ -71,10 +72,11 @@
 		981588031E248F5900670BF2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		981588051E248F6500670BF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		981588071E248F7300670BF2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		9815880A1E24906600670BF2 /* nstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nstagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		9815880A1E24906600670BF2 /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		9815880B1E24B81D00670BF2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		9815880D1E24BD2A00670BF2 /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
-		9815880E1E24BD2A00670BF2 /* PostTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewController.xib; sourceTree = "<group>"; };
+		9819BB861E25087700BA8742 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		9819BB871E25087700BA8742 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		9819BB8A1E25168100BA8742 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		98DA890B1E11FFDC001DA087 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DA890E1E11FFDC001DA087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98DA89101E11FFDC001DA087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +150,7 @@
 		98DA89021E11FFDC001DA087 = {
 			isa = PBXGroup;
 			children = (
-				9815880A1E24906600670BF2 /* nstagram-Bridging-Header.h */,
+				9815880A1E24906600670BF2 /* Instagram-Bridging-Header.h */,
 				98DA890D1E11FFDC001DA087 /* Instagram */,
 				98DA890C1E11FFDC001DA087 /* Products */,
 				10A41E357DCAFDBF6C74ADF4 /* Pods */,
@@ -172,13 +174,14 @@
 				98DA890E1E11FFDC001DA087 /* AppDelegate.swift */,
 				98DA89101E11FFDC001DA087 /* ViewController.swift */,
 				98DA89121E11FFDC001DA087 /* Main.storyboard */,
+				9819BB8A1E25168100BA8742 /* PostData.swift */,
+				9819BB861E25087700BA8742 /* PostTableViewCell.swift */,
+				9819BB871E25087700BA8742 /* PostTableViewCell.xib */,
 				98DA89281E1202C3001DA087 /* SettingViewController.swift */,
 				98DA89261E120279001DA087 /* PostViewController.swift */,
 				9815880B1E24B81D00670BF2 /* Const.swift */,
 				98DA89241E120223001DA087 /* ImageSelectViewController.swift */,
 				98DA89221E1201C8001DA087 /* HomeViewController.swift */,
-				9815880D1E24BD2A00670BF2 /* PostTableViewController.swift */,
-				9815880E1E24BD2A00670BF2 /* PostTableViewController.xib */,
 				98DA89201E120169001DA087 /* LoginViewController.swift */,
 				98DA89151E11FFDC001DA087 /* Assets.xcassets */,
 				98DA89171E11FFDC001DA087 /* LaunchScreen.storyboard */,
@@ -254,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DA89191E11FFDC001DA087 /* LaunchScreen.storyboard in Resources */,
-				981588101E24BD2A00670BF2 /* PostTableViewController.xib in Resources */,
+				9819BB891E25087700BA8742 /* PostTableViewCell.xib in Resources */,
 				98EC8C661E162CDC00C1DBBC /* GoogleService-Info.plist in Resources */,
 				98DA89161E11FFDC001DA087 /* Assets.xcassets in Resources */,
 				98DA89141E11FFDC001DA087 /* Main.storyboard in Resources */,
@@ -333,11 +336,12 @@
 				98DA89211E120169001DA087 /* LoginViewController.swift in Sources */,
 				98DA89111E11FFDC001DA087 /* ViewController.swift in Sources */,
 				98DA890F1E11FFDC001DA087 /* AppDelegate.swift in Sources */,
-				9815880F1E24BD2A00670BF2 /* PostTableViewController.swift in Sources */,
 				98DA89251E120223001DA087 /* ImageSelectViewController.swift in Sources */,
+				9819BB8B1E25168100BA8742 /* PostData.swift in Sources */,
 				9815880C1E24B81D00670BF2 /* Const.swift in Sources */,
 				98DA89291E1202C3001DA087 /* SettingViewController.swift in Sources */,
 				98DA89231E1201C8001DA087 /* HomeViewController.swift in Sources */,
+				9819BB881E25087700BA8742 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,13 +468,13 @@
 				DEVELOPMENT_TEAM = P7NJ9KX3WJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Instagram",
+					"$(PROJECT_DIR)/Instagram/**",
 				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kotarou.kobayashi.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)Instagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -483,13 +487,13 @@
 				DEVELOPMENT_TEAM = P7NJ9KX3WJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Instagram",
+					"$(PROJECT_DIR)/Instagram/**",
 				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kotarou.kobayashi.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)Instagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
