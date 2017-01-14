@@ -326,11 +326,45 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="aph-rg-XZ7" id="0A9-yA-Gbk"/>
+                        <segue destination="pJG-bg-HV4" kind="show" identifier="ShowcomentView" id="wIX-lp-eAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zet-HG-jzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1534" y="136"/>
+        </scene>
+        <!--Coment View Controller-->
+        <scene sceneID="OR0-9a-xhM">
+            <objects>
+                <viewController id="pJG-bg-HV4" customClass="ComentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fdZ-tA-aG0"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ZN-ZM-B86"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y6s-yy-pVY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-zm-gjB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hvP-zm-gjB" firstAttribute="leading" secondItem="y6s-yy-pVY" secondAttribute="leading" id="3El-iB-Q9G"/>
+                            <constraint firstAttribute="trailing" secondItem="hvP-zm-gjB" secondAttribute="trailing" id="Zxt-jw-aZR"/>
+                            <constraint firstItem="0ZN-ZM-B86" firstAttribute="top" secondItem="hvP-zm-gjB" secondAttribute="bottom" id="rtt-yM-iJW"/>
+                            <constraint firstItem="hvP-zm-gjB" firstAttribute="top" secondItem="fdZ-tA-aG0" secondAttribute="bottom" id="s4f-Ba-ddD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ComentTableView" destination="hvP-zm-gjB" id="Shq-z2-e0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYa-6a-WB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266" y="137"/>
         </scene>
     </scenes>
     <resources>

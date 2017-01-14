@@ -14,6 +14,12 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var comenButton: UIButton!
+    
+    @IBAction func comenButton(_ sender: AnyObject) {
+        //let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+        //self.present(loginViewController!, animated: true, completion: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

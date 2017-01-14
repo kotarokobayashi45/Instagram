@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="478" height="742"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="478" height="741.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="478" height="742"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hP4-zj-wJJ">
@@ -44,7 +44,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KH-uB-p4S">
-                        <rect key="frame" x="420" y="500" width="40" height="21"/>
+                        <rect key="frame" x="420" y="490" width="40" height="41"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="hNl-fv-4su"/>
                         </constraints>
@@ -55,32 +55,27 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZa-dS-Ubq">
                         <rect key="frame" x="208" y="495" width="62" height="30"/>
                         <state key="normal" title="コメント"/>
+                        <connections>
+                            <action selector="comenButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RFP-DO-Lms"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu8-id-8a3">
-                        <rect key="frame" x="18" y="540" width="442" height="20.5"/>
+                        <rect key="frame" x="18" y="540" width="442" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bJ7-IH-Nqm">
-                        <rect key="frame" x="18" y="570.5" width="442" height="153"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tableView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="AZa-dS-Ubq" firstAttribute="centerY" secondItem="nn9-Ob-Pqj" secondAttribute="centerY" id="07Y-Vk-iBj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3KH-uB-p4S" secondAttribute="trailing" constant="10" id="0i6-qm-keU"/>
                     <constraint firstItem="Bu8-id-8a3" firstAttribute="top" secondItem="nn9-Ob-Pqj" secondAttribute="bottom" constant="10" id="3Mo-Xd-OjC"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="bJ7-IH-Nqm" secondAttribute="trailing" constant="10" id="73c-VL-cdY"/>
                     <constraint firstItem="nn9-Ob-Pqj" firstAttribute="top" secondItem="hP4-zj-wJJ" secondAttribute="bottom" constant="10" id="8XR-ha-jiN"/>
                     <constraint firstItem="Tln-v0-5zt" firstAttribute="leading" secondItem="nn9-Ob-Pqj" secondAttribute="trailing" constant="10" id="9w8-24-I2x"/>
                     <constraint firstItem="3KH-uB-p4S" firstAttribute="centerY" secondItem="nn9-Ob-Pqj" secondAttribute="centerY" id="BTi-Wy-HS0"/>
                     <constraint firstItem="hP4-zj-wJJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Fzr-b3-Q7z"/>
-                    <constraint firstItem="bJ7-IH-Nqm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="G0Y-wT-oRM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Bu8-id-8a3" secondAttribute="trailing" constant="10" id="May-sf-4ws"/>
-                    <constraint firstItem="bJ7-IH-Nqm" firstAttribute="top" secondItem="Bu8-id-8a3" secondAttribute="bottom" constant="10" id="Q7b-KA-IjF"/>
                     <constraint firstItem="Tln-v0-5zt" firstAttribute="centerY" secondItem="nn9-Ob-Pqj" secondAttribute="centerY" id="cZb-qB-S31"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="bJ7-IH-Nqm" secondAttribute="bottom" constant="10" id="fov-X3-Vfv"/>
                     <constraint firstItem="nn9-Ob-Pqj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="gEm-Aa-ncd"/>
                     <constraint firstItem="Tln-v0-5zt" firstAttribute="centerY" secondItem="nn9-Ob-Pqj" secondAttribute="centerY" id="iBx-Vf-zNY"/>
                     <constraint firstItem="Bu8-id-8a3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="luv-aW-EsX"/>
@@ -91,6 +86,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="captionLabel" destination="Bu8-id-8a3" id="Yfe-oK-N39"/>
+                <outlet property="comenButton" destination="AZa-dS-Ubq" id="kZ5-cK-tdA"/>
                 <outlet property="dateLabel" destination="3KH-uB-p4S" id="XOp-Zd-Mg8"/>
                 <outlet property="likeButton" destination="nn9-Ob-Pqj" id="Iuk-0k-Jej"/>
                 <outlet property="likeLabel" destination="Tln-v0-5zt" id="9XN-QY-0JI"/>
