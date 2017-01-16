@@ -174,16 +174,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDs-WG-ddr">
-                                <rect key="frame" x="37" y="140" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Xqc-6e-b0Z"/>
-                                </constraints>
-                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
-                                <connections>
-                                    <action selector="handleChangeButton:" destination="yEu-zg-u4l" eventType="touchUpInside" id="exD-kP-hIX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrO-pg-wR7">
                                 <rect key="frame" x="37" y="190" width="300" height="40"/>
                                 <constraints>
@@ -192,6 +182,16 @@
                                 <state key="normal" title="ログアウト" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleLogoutButton:" destination="yEu-zg-u4l" eventType="touchUpInside" id="ryN-q0-E8r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDs-WG-ddr">
+                                <rect key="frame" x="37" y="140" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Xqc-6e-b0Z"/>
+                                </constraints>
+                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleChangeButton:" destination="yEu-zg-u4l" eventType="touchUpInside" id="exD-kP-hIX"/>
                                 </connections>
                             </button>
                         </subviews>
