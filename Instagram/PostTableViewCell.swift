@@ -14,12 +14,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var comenButton: UIButton!
     
-    @IBAction func comenButton(_ sender: AnyObject) {
-        //let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
-        //self.present(loginViewController!, animated: true, completion: nil)
-    }
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,6 +50,12 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: UIControlState.normal)
         }
+        //読み込んだコメントを反映
+        var commentTexts = ""
+        for comment in postData.comments {
+            commentTexts += "\(comment)\n"
+        }
+        commentLabel.text = commentTexts
     }
     
 }

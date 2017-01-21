@@ -326,17 +326,16 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="aph-rg-XZ7" id="0A9-yA-Gbk"/>
-                        <segue destination="pJG-bg-HV4" kind="show" identifier="ShowcomentView" id="wIX-lp-eAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zet-HG-jzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1534" y="136"/>
         </scene>
-        <!--Coment View Controller-->
+        <!--Comment View Controller-->
         <scene sceneID="OR0-9a-xhM">
             <objects>
-                <viewController id="pJG-bg-HV4" customClass="ComentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Comment" id="pJG-bg-HV4" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fdZ-tA-aG0"/>
                         <viewControllerLayoutGuide type="bottom" id="0ZN-ZM-B86"/>
@@ -345,21 +344,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-zm-gjB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-DN-piJ">
+                                <rect key="frame" x="37.5" y="100" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dXo-pS-St0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-2c-UQs">
+                                <rect key="frame" x="37" y="140" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="B3I-4b-Jrc"/>
+                                </constraints>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="pJG-bg-HV4" eventType="touchUpInside" id="tFM-mD-CkG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQp-pR-A66">
+                                <rect key="frame" x="37" y="190" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="rVn-Wh-uG0"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="pJG-bg-HV4" eventType="touchUpInside" id="y1h-2q-Voi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hvP-zm-gjB" firstAttribute="leading" secondItem="y6s-yy-pVY" secondAttribute="leading" id="3El-iB-Q9G"/>
-                            <constraint firstAttribute="trailing" secondItem="hvP-zm-gjB" secondAttribute="trailing" id="Zxt-jw-aZR"/>
-                            <constraint firstItem="0ZN-ZM-B86" firstAttribute="top" secondItem="hvP-zm-gjB" secondAttribute="bottom" id="rtt-yM-iJW"/>
-                            <constraint firstItem="hvP-zm-gjB" firstAttribute="top" secondItem="fdZ-tA-aG0" secondAttribute="bottom" id="s4f-Ba-ddD"/>
+                            <constraint firstItem="uHu-2c-UQs" firstAttribute="centerX" secondItem="y6s-yy-pVY" secondAttribute="centerX" id="0Qc-45-bzM"/>
+                            <constraint firstItem="YV5-DN-piJ" firstAttribute="centerX" secondItem="y6s-yy-pVY" secondAttribute="centerX" id="9Ml-Nb-UbC"/>
+                            <constraint firstItem="jQp-pR-A66" firstAttribute="top" secondItem="uHu-2c-UQs" secondAttribute="bottom" constant="10" id="Aq9-XC-u6d"/>
+                            <constraint firstItem="jQp-pR-A66" firstAttribute="centerX" secondItem="y6s-yy-pVY" secondAttribute="centerX" id="MvP-nC-5wP"/>
+                            <constraint firstItem="YV5-DN-piJ" firstAttribute="top" secondItem="fdZ-tA-aG0" secondAttribute="bottom" constant="80" id="OIZ-6a-oNJ"/>
+                            <constraint firstItem="uHu-2c-UQs" firstAttribute="top" secondItem="YV5-DN-piJ" secondAttribute="bottom" constant="10" id="d7B-rH-DtJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ComentTableView" destination="hvP-zm-gjB" id="Shq-z2-e0Z"/>
+                        <outlet property="commentTextField" destination="YV5-DN-piJ" id="jG0-3W-USK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYa-6a-WB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
